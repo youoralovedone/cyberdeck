@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+import psutil
+from hurry.filesize import size
+
+m = psutil.virtual_memory()
+print("[{} / {} -- {}%]".format(size(m.used), size(m.total), m.percent))

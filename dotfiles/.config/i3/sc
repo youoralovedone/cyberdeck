@@ -1,0 +1,6 @@
+# requires imagemagick and xclip, install with pacman
+# bind to mod p in i3config
+
+path=~/screenshots/$(date +"%a_%d_%b_%Y%I%M%S").png
+import $path
+xclip -selection clipboard -t image/png -i $path
